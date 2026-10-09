@@ -1,0 +1,23 @@
+# Blok keluaran yang tercetak di Bab 13 (bab13-hmm.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab13_*.py.
+
+=== blok 1 ===
+(1) Data mini sebagai barisan, A = [[3/4, 1/4], [1/4, 3/4]]:
+    gamma_t(1) maju-mundur:
+      [0.9411 0.8916 0.7529 0.2471 0.1084 0.0589]
+    gamma_t(1) dari 64 barisan:
+      [0.9411 0.8916 0.7529 0.2471 0.1084 0.0589]
+    log p(x) = -26.9152  (64 barisan: -26.9152)
+    rasio B[t,1]/B[t,2] = 9 3 3 0.3333 0.3333 0.1111
+    A baru = [[0.6511, 0.3489], [0.0699, 0.9301]]
+
+=== blok 2 ===
+(2) Baum-Welch pada data mini:
+    log p(x): -26.9152 -> -22.2326
+    A = [[0.6667, 0.3333], [0.0, 1.0]]
+    mu = [[2.0, 2.0], [6.0, 6.0]]
+
+=== blok 3 ===
+(3) T = 600, A benar = [[0.95, 0.05], [0.10, 0.90]]:
+    akurasi keadaan: GMM 0.770, HMM 0.953
+    A taksiran = [[0.969, 0.031], [0.138, 0.862]]

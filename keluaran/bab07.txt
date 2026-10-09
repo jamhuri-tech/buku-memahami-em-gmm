@@ -1,0 +1,28 @@
+# Blok keluaran yang tercetak di Bab 7 (bab07-konvergensi.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab07_*.py.
+
+=== blok 1 ===
+(1) EM pi saja dari 3/4: rasio jarak berturut-turut
+    0.6762 0.6298 0.6215 0.6202 0.6200 0.6200
+    I_c = 24.00  I_obs = 9.12  1 - I_obs/I_c = 0.6200
+    M'(1/2) beda hingga = 0.6200
+
+=== blok 2 ===
+(2) Jebakan simetri; awal Sigma = sigma0^2 I, pi = (1/2, 1/2)
+    awal mu1 = (3, 4.00): l akhir = -26.3808
+      mu1 akhir = [2.012 3.006]
+      r_i1 = 0.9971 0.9971 0.5000 0.5000 0.0029 0.0029
+    awal mu1 = (3, 4.01): l akhir = -24.4820
+      mu1 akhir = [2. 4.]
+      r_i1 = 1.0000 1.0000 0.0000 1.0000 0.0000 0.0000
+    awal mu1 = (3, 3.99): l akhir = -24.4820
+      mu1 akhir = [2. 2.]
+      r_i1 = 1.0000 1.0000 1.0000 0.0000 0.0000 0.0000
+
+=== blok 3 ===
+(3) 400 sampel, 4 komponen; l terbaik = -1681.75
+    init_params       capai terbaik   rata-rata l   iterasi
+    random              0.0%         -1794.30      2.0
+    random_from_data   25.5%         -1694.95     18.0
+    k-means++          57.5%         -1684.18     10.7
+    kmeans             99.5%         -1681.86      3.0

@@ -1,0 +1,27 @@
+# Blok keluaran yang tercetak di Bab 11 (bab11-terapan.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab11_*.py.
+
+=== blok 1 ===
+(1) ARI terhadap kelompok g:
+    EM dari (3,3), (5,5)      ARI =  1.0000
+    partisi {1,2,4} {3,5,6}   ARI = -0.1111
+    label ditukar             ARI =  1.0000
+
+=== blok 2 ===
+(2) -log p(x): satu Gaussian lawan GMM akhir
+    x        satu Gaussian   GMM
+    (4, 4)     3.4858        6.3872
+    (8, 0)     8.8191       11.7205
+    (2, 2)     3.9302        3.0803
+    ambang (skor terbesar sampel latih): 4.4858   4.0803
+
+=== blok 3 ===
+(3) AUC skor -log p, 600 normal + 30 anomali, 50 ulangan:
+    satu Gaussian  0.757
+    GMM K=3        0.912
+
+=== blok 4 ===
+(4) Akurasi data uji (selang-seling, 400 sampel latih):
+    regresi logistik      0.545
+    QDA (satu normal)     0.546
+    GMM K = 2 per kelas   0.883

@@ -1,0 +1,39 @@
+# Blok keluaran yang tercetak di Bab 4 (bab04-em.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab04_*.py.
+
+=== blok 1 ===
+(1) Iterasi 1 dari awal mu = (3,3), (5,5), sigma0^2 = 6/log 3
+    r_i1 = [0.9  0.75 0.75 0.25 0.25 0.1 ]  N = [3. 3.]
+    pi = [0.5 0.5]  mu1 = [2.7 2.7]  mu2 = [5.3 5.3]
+    Sigma1 = [[4.31, 1.31], [1.31, 4.31]]
+    Sigma2 = [[4.31, 1.31], [1.31, 4.31]]
+    r_i1 baru = [0.9414 0.8003 0.8003 0.1997 0.1997 0.0586]
+    log-kemungkinan: -27.3068 -> -26.7058
+
+=== blok 2 ===
+(2) Riwayat EM pada data mini:
+    t   log-kemungkinan   kenaikan
+    0       -27.306803
+    1       -26.705755     0.601048
+    2       -26.479577     0.226178
+    3       -25.896325     0.583251
+    4       -24.804203     1.092122
+    5       -24.482229     0.321974
+    6       -24.481958     0.000272
+    7       -24.481958     0.000000
+    berhenti sesudah 7 iterasi
+    akhir: pi = [0.5 0.5]  mu1 = (2.0000123, 2.0000123)
+    r_i1 akhir = 1.000000 0.999994 0.999994 ...
+    Sigma1 = [[2.0, -1.0], [-1.0, 2.0]]
+    sklearn max_iter =   1: mu1 = [2.7 2.7]  sama: True
+    sklearn max_iter =   2: mu1 = [2.5168 2.5168]  sama: True
+    sklearn max_iter = 500: mu1 = [2. 2.]  sama: True
+
+=== blok 3 ===
+(3) 900 sampel dari 3 komponen; EM dari 3 sampel acak:
+    log-kemungkinan = -3512.709, sklearn = -3512.709
+    pi benar = [0.5 0.3 0.2]
+    pi taksiran = [0.4835 0.308  0.2085]
+    mu = [-0.045 -0.089]  Sigma = [[2.15, 0.8], [0.8, 0.98]]
+    mu = [5.19  0.926]  Sigma = [[0.93, -0.52], [-0.52, 1.29]]
+    mu = [2.025 4.926]  Sigma = [[0.56, -0.13], [-0.13, 2.19]]

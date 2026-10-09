@@ -1,0 +1,25 @@
+# Blok keluaran yang tercetak di Bab 3 (bab03-laten.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab03_*.py.
+
+=== blok 1 ===
+(2) log r1/r2 = w'x + w0 dengan w = [-4. -4.]  w0 = 32.0
+    x        w'x + w0   r1 NumPy   r1 sklearn
+    (4, 1)     12.0   0.999994   0.999994
+    (4, 4)      0.0   0.500000   0.500000
+    (5, 4)     -4.0   0.017986   0.017986
+
+=== blok 2 ===
+(1) 100000 sampel dari GMM akhir data mini:
+    bagian z = 1: 0.4993
+    rata-rata sampel = [3.9899 4.0062]  teori = [4. 4.]
+    kovarians sampel = [[6.005, 2.996], [2.996, 5.979]]
+    W + B            = [[6.0, 3.0], [3.0, 6.0]]
+
+=== blok 3 ===
+(3) mu_1 = x_1, Sigma_1 = eps I; komponen 2 = satu Gaussian
+    eps = 1       log-kemungkinan =  -28.0658
+    eps = 0.1     log-kemungkinan =  -26.1161
+    eps = 0.01    log-kemungkinan =  -23.8199
+    eps = 0.0001  log-kemungkinan =  -19.2154
+    eps = 1e-08   log-kemungkinan =  -10.0051
+    pembanding: EM data mini     =  -24.4820

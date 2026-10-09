@@ -1,0 +1,24 @@
+# Blok keluaran yang tercetak di Bab 1 (bab01-campuran.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab01_*.py.
+
+=== blok 1 ===
+(1) Data mini: m = 6 sampel, n = 2 fitur
+    satu Gaussian: mu = [4. 4.]  det Sigma = 27.0000
+    log-kemungkinan satu Gaussian = -26.9148
+    GaussianMixture K = 2:
+      pi = [0.5 0.5]  mu = [[2.0, 2.0], [6.0, 6.0]]
+      log-kemungkinan            = -24.4820
+
+=== blok 2 ===
+(2) Awal: mu1 = (3, 3), mu2 = (5, 5), sigma0^2 = 5.4614
+    r_i1 NumPy   : [0.9  0.75 0.75 0.25 0.25 0.1 ]
+    r_i1 SciPy   : [0.9  0.75 0.75 0.25 0.25 0.1 ]
+    r_i1 sklearn : [0.9  0.75 0.75 0.25 0.25 0.1 ]
+    log-kemungkinan awal = -27.3068
+
+=== blok 3 ===
+(3) Turunan log p(x_1), x_1 = (1, 1):
+                rumus               beda hingga
+    d/d mu_1    [-0.3296 -0.3296]   [-0.3296 -0.3296]
+    d/d S1_11   [-0.022]            [-0.022]
+    d/d beta_1  [0.4]               [0.4]

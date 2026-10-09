@@ -1,0 +1,26 @@
+# Blok keluaran yang tercetak di Bab 9 (bab09-banyakk.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab09_*.py.
+
+=== blok 1 ===
+(1) Data mini (m = 6):
+    K  jenis      p    log-kem    AIC      BIC
+    1  full        5   -26.9148   63.830   62.788
+    2  full       11   -24.4820   70.964   68.673
+    2  tied        8   -24.4820   64.964   63.298
+    1  spherical   3   -27.7778   61.556   60.931
+    2  spherical   7   -25.3347   64.669   63.212
+
+=== blok 2 ===
+(2) 2(l_2 - l_1) di bawah H0: satu normal, m = 100;
+    300 ulangan
+    rata-rata = 7.30; chi2_6 rata-rata = 6
+    kuantil 95%: simulasi = 16.99; chi2_6 = 12.59
+    P(2 dl > chi2_6(0.95)) = 0.113
+
+=== blok 3 ===
+(3) K terpilih pada 100 data (400 sampel, K benar = 4):
+    K           1    2    3    4    5    6    7
+    AIC         0    0    0   86   12    2    0
+    BIC         0    1   14   85    0    0    0
+    ICL        17   61   18    4    0    0    0
+    CV          0    0    0   93    6    1    0

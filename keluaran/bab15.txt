@@ -1,0 +1,58 @@
+# Blok keluaran yang tercetak di Bab 15 (bab15-studikasus.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab15_*.py.
+
+=== blok 1 ===
+(1) Palmer Penguins: m = 342 (2 baris tanpa ukuran dibuang)
+    spesies: {'Adelie': 151, 'Gentoo': 123, 'Chinstrap': 68}
+    rata-rata: [  43.9   17.2  200.9 4201.8]
+    simp. baku: [  5.5   2.   14.  800.8]
+    korelasi panjang paruh-sirip   = 0.656
+    korelasi kedalaman paruh-sirip = -0.584
+
+=== blok 2 ===
+(2) Lima BIC terkecil dari 32 model
+    (K = 1..8, empat struktur kovarians):
+    struktur  K   p   log-kem     BIC      ICL
+    tied      4  29   -1166.07   2501.4   2593.3
+    tied      3  24   -1187.90   2515.8   2532.4
+    tied      5  34   -1161.30   2521.0   2701.3
+    tied      6  39   -1151.61   2530.8   2728.6
+    tied      7  44   -1142.34   2541.4   2739.9
+    ICL terkecil: tied K = 3 (ICL 2532.4, BIC 2515.8)
+
+=== blok 3 ===
+(3) Diagnostik dua calon (kovarians bersama):
+    K = 3: log-kem = -1187.90, konvergen = True
+      pemulaan tunggal mencapai terbaik: 16 dari 20
+      N_k = [ 64.9 123.  154.1]
+      eigen terkecil Sigma = 0.102
+      rata-rata ketidakpastian = 0.0100, ARI spesies = 0.960
+                  k1   k2  k3
+      species
+      Adelie       0  150   1
+      Chinstrap    0    4  64
+      Gentoo     123    0   0
+    K = 4: log-kem = -1166.07, konvergen = True
+      pemulaan tunggal mencapai terbaik: 8 dari 20
+      N_k = [ 58.5  64.   96.4 123. ]
+      eigen terkecil Sigma = 0.084
+      rata-rata ketidakpastian = 0.0556, ARI spesies = 0.753
+                  k1  k2  k3  k4
+      species
+      Adelie       0  93  57   1
+      Chinstrap    0   5   0  63
+      Gentoo     123   0   0   0
+      Adelie menurut jenis kelamin:
+              k2  k3  k4
+      sex
+      ?        3   2   0
+      female  57  16   0
+      male    33  39   1
+    pembanding K-Means K = 3: ARI spesies = 0.793
+
+=== blok 4 ===
+(4) GMM K = 3, pusat dalam satuan asal (urut sirip):
+    paruh-p  paruh-d  sirip   massa    bobot  SE bootstrap
+      38.9     18.3   189.8     3693   0.451  0.029
+      49.1     18.5   196.5     3754   0.190  0.021
+      47.5     15.0   217.2     5076   0.360  0.032

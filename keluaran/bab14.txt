@@ -1,0 +1,22 @@
+# Blok keluaran yang tercetak di Bab 14 (bab14-inferensi.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab14_*.py.
+
+=== blok 1 ===
+(1) Model pi saja di pi = 1/2:
+    I_obs (beda hingga) = 9.1200  SE = 0.3311
+    I_c = 24.0000              SE = 0.2041
+
+=== blok 2 ===
+(2) m = 200; galat baku menurut tiga cara:
+    SE(eta) skor = 0.225, eta = logit pi_1 = -1.247
+    param   taksiran  skor    bootstrap  Monte Carlo
+    pi_1      0.223   0.039    0.051      0.052
+    mu_11    -0.430   0.163    0.299      0.240
+    mu_12    -0.188   0.118    0.261      0.226
+    mu_21     2.778   0.115    0.145      0.157
+    mu_22     0.920   0.088    0.103      0.110
+
+=== blok 3 ===
+(3) Cakupan selang 95%, 300 ulangan:
+    mu_21 (Wald):          0.947
+    pi_1 (Wald pada logit): 0.967

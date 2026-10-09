@@ -1,0 +1,19 @@
+# Setiap perubahan kode dijalankan ulang dan dicocokkan dengan angka
+# yang tercetak di buku (keluaran/babNN.txt).
+name: periksa keluaran
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  periksa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - run: python periksa.py

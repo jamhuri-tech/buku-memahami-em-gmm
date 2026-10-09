@@ -1,0 +1,34 @@
+# Blok keluaran yang tercetak di Bab 12 (bab12-variasi.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab12_*.py.
+
+=== blok 1 ===
+(1) EM keras, satu iterasi dari awal Bab 1:
+    mu = [[2.0, 2.0], [6.0, 6.0]]
+    Sigma_1 = [[2.0, -1.0], [-1.0, 2.0]]
+
+=== blok 2 ===
+(2) Dua komponen N((0,0), I) dan N((2,0), I), m = 4000:
+    EM lunak: mu_1 = [0.039 0.035]  var x1 = 1.025
+    EM keras: mu_1 = [-0.15   0.004]  var x1 = 0.646
+
+=== blok 3 ===
+(3) EM daring, satu sampel per langkah,
+    gamma_t = (t + 10)^-0.6:
+    t =  1000  log-kem. uji per sampel = -3.9308
+    t =  5000  log-kem. uji per sampel = -3.9021
+    t = 20000  log-kem. uji per sampel = -3.8911
+    EM biasa (20000 sampel):            -3.8856
+
+=== blok 4 ===
+(4) 300 sampel + 15 pencilan; pusat benar (0, 0) dan (5, 0):
+    GMM:        mu = [[2.41, 0.06], [1.46, 0.24]]
+                var x1 = [  7.18 276.15]
+    campuran t: mu = [[0.05, -0.03], [5.01, 0.14]]
+                var x1 = [1.04 0.82]
+    bobot u rata-rata: inlier 1.048, pencilan 0.032
+
+=== blok 5 ===
+(5) BayesianGaussianMixture, K = 10, prior konsentrasi 0.01:
+    bobot terurut: 0.496 0.304 0.199 0.001 0.000
+                   0.000 0.000 0.000 0.000 0.000
+    komponen dengan bobot > 0.01: 3

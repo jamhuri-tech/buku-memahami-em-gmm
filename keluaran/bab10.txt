@@ -1,0 +1,35 @@
+# Blok keluaran yang tercetak di Bab 10 (bab10-singular.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab10_*.py.
+
+=== blok 1 ===
+(1) Data mini + (1, 1) ganda, K = 3, EM tanpa regularisasi:
+    t = 0  l =  -29.6349  det Sigma_1 = 4.0000
+    t = 1  l =  -27.2120  det Sigma_1 = 0.8325
+    t = 2  l =  -22.1591  det Sigma_1 = 0.0300
+    iterasi 4: Sigma_1 tidak lagi definit positif
+    sklearn reg_covar = 0: ValueError
+    EM dengan Sigma_k + eps I:
+    eps = 1e-06  l =    7.456  Sigma_1 = [2. 0.]
+    eps = 0.01   l =  -15.570  Sigma_1 = [2.01 0.01]
+    eps = 0.5    l =  -25.513  Sigma_1 = [2.5    0.5004]
+
+=== blok 2 ===
+(2) EM-MAP, alpha = 2, Psi = 0.5 I, nu = 1:
+    pi = [0.3 0.3 0.4]
+    mu_1 = [1. 1.]
+      Sigma_1 = [[0.083, 0.0], [0.0, 0.083]]
+    mu_2 = [2.5 2.5]
+      Sigma_2 = [[0.833, -0.75], [-0.75, 0.833]]
+    mu_3 = [6. 6.]
+      Sigma_3 = [[0.929, -0.429], [-0.429, 0.929]]
+
+=== blok 3 ===
+(3) m = 45 sampel latih, n = 6, K = 3; 50 ulangan;
+    rata-rata log-kemungkinan per sampel uji:
+    reg_covar = 1e-06   -13.078
+    reg_covar = 0.01    -13.012
+    reg_covar = 0.1     -12.078
+    reg_covar = 0.3     -11.282
+    reg_covar = 1       -10.896
+    reg_covar = 3       -11.618
+    reg_covar = 10      -13.535

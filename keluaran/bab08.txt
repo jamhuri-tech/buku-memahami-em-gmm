@@ -1,0 +1,29 @@
+# Blok keluaran yang tercetak di Bab 8 (bab08-kovarians.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab08_*.py.
+
+=== blok 1 ===
+(1) Data mini, EM dari kelompok g:
+    jenis      param  log-kem    kovarians komp. 1
+    full       11     -24.4820   [[2.0, -1.0], [-1.0, 2.0]]
+    tied       8      -24.4820   [[2.0, -1.0], [-1.0, 2.0]]
+    diag       9      -25.3347   [[2.021, 0.0], [0.0, 2.021]]
+    spherical  7      -25.3347   [[2.021, 0.0], [0.0, 2.021]]
+
+=== blok 2 ===
+(3) 600 sampel, dua klaster memanjang bersilang:
+    jenis      param  BIC          ARI
+    full       11     4743.8       0.587
+    tied       8      5241.0       0.079
+    diag       9      5241.3       -0.002
+    spherical  7      5277.4       0.061
+    KMeans     -      -            0.245
+
+=== blok 3 ===
+(2) r_31; mu = (3,3), (5,5), Sigma = s2 I, pi = (1/2, 1/2):
+    s2 = 5.4614  r_31 = 0.750000
+    s2 = 4.0000  r_31 = 0.817574
+    s2 = 1.0000  r_31 = 0.997527
+    s2 = 0.2500  r_31 = 1.000000
+    s2 = 0.0500  r_31 = 1.000000
+    KMeans: label = [0 0 0 1 1 1]  inersia = 24.0
+            pusat = [[2.0, 2.0], [6.0, 6.0]]

@@ -1,0 +1,29 @@
+# Blok keluaran yang tercetak di Bab 2 (bab02-normal.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab02_*.py.
+
+=== blok 1 ===
+(1) MLE satu Gaussian pada data mini:
+    mu = [4. 4.]  Sigma = [[6.0, 3.0], [3.0, 6.0]]
+    np.cov(bias=True) = [[6.0, 3.0], [3.0, 6.0]]
+    SciPy fit: mu = [4. 4.]  Sigma = [[6.0, 3.0], [3.0, 6.0]]
+    nilai eigen = [3. 9.]  det = 27.0000
+    d_i^2 = [2. 2. 2. 2. 2. 2.]  jumlah = 12.0000
+    log-kemungkinan NumPy = -26.9148  SciPy = -26.9148
+
+=== blok 2 ===
+(2) Rata-rata Sigma-hat [s11 s12 s22], 20000 ulangan,
+    Sigma benar = [[2, -1], [-1, 2]]:
+    m =  3  pembagi m: [1.338 -0.666 1.318]  (m-1)/m = 0.667
+           pembagi m-1: [2.006 -0.999 1.977]
+    m =  6  pembagi m: [1.642 -0.824 1.666]  (m-1)/m = 0.833
+           pembagi m-1: [1.971 -0.989 2.000]
+    m = 30  pembagi m: [1.932 -0.967 1.932]  (m-1)/m = 0.967
+           pembagi m-1: [1.999 -1.000 1.999]
+
+=== blok 3 ===
+(3) Batas chi2_2(0.95) = 5.9915
+    parameter benar: P(d^2 <= batas) = 0.9510
+                     rata-rata d^2    = 1.9886
+    taksiran dari m =   6: P(d^2 baru <= batas) = 0.6924
+    taksiran dari m =  30: P(d^2 baru <= batas) = 0.9176
+    taksiran dari m = 200: P(d^2 baru <= batas) = 0.9496

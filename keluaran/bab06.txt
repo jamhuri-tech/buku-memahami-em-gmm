@@ -1,0 +1,35 @@
+# Blok keluaran yang tercetak di Bab 6 (bab06-umum.tex).
+# Diperiksa oleh periksa.py terhadap kode/bab06_*.py.
+
+=== blok 1 ===
+(1) Campuran Bernoulli, awal theta1 = 3/4, theta2 = 1/4:
+     t   log-kemungkinan   r_i1
+     0   -12.508146        0.036 0.250 0.250 0.964 0.750 0.750
+     1   -12.076892        0.057 0.179 0.179 0.943 0.821 0.821
+     2   -12.011117        0.045 0.138 0.138 0.955 0.862 0.862
+     5   -11.893194        0.018 0.063 0.063 0.982 0.937 0.937
+    10   -11.820546        0.004 0.016 0.016 0.996 0.984 0.984
+    50   -11.797053        0.000 0.000 0.000 1.000 1.000 1.000
+    iterasi 1: theta1 = 0.655 0.821 0.655
+               theta2 = 0.345 0.179 0.345
+    t = 200:   theta1 = 0.667 1.000 0.667  pi = 0.500 0.500
+               theta2 = 0.333 0.000 0.333
+    log-kemungkinan t = 200: -11.797053
+    BFGS dari awal yang sama: l = -11.7971
+
+=== blok 2 ===
+(2) x2 sampel 4 hilang; awal = kasus lengkap:
+    mu = [4.  3.4]  Sigma = [[7.2, 3.6], [3.6, 5.04]]
+    iterasi 1: isian = 3.4000, var bersyarat = 3.2400
+      mu = [4.  3.4]  Sigma = [[6.0, 3.0], [3.0, 4.74]]
+    iterasi 2: isian = 3.4000, var bersyarat = 3.2400
+      mu = [4.  3.4]  Sigma = [[6.0, 3.0], [3.0, 4.74]]
+
+=== blok 3 ===
+(3) mu2 = 4, Var(x2) = 6; m = 50; x2 hilang dengan peluang
+    0.7 bila x1 > 4 dan 0.1 bila tidak; 2000 ulangan:
+    cara           rata-rata mu2  rata-rata Var(x2)
+    kasus lengkap  3.500          5.526
+    isi rata-rata  3.500          3.320
+    EM             3.986          5.822
+    MLE tanpa nilai hilang: harapan Var = 49/50 * 6 = 5.880
